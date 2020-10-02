@@ -55,7 +55,6 @@ html {
   scroll-behavior: smooth;
   font-size: 20px;
 }
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -10201,7 +10200,7 @@ ul.list-group.text-black {
 }
 
 .dropdown-item {
-  font-size: 0.59rem;
+  font-size: 0.9rem;
 }
 
 .page-section.pb-0.programs {
@@ -10242,8 +10241,59 @@ section#home-reviews p {
   background-color: #99576b;
 }
 
-/*anchor offsetting*/
+.review-body {
+  color: white;
+}
+
 /*animation*/
+
+._anim-show {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+._anim-show._active,
+._active ._anim-show {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.text__item {
+  overflow: hidden;
+  margin: 0px 0px 25px 0px;
+}
+.text__item:last-child {
+  margin: 0;
+}
+
+.fullscreen__title {
+  font-size: 70px;
+  margin: 0px 0px 20px 0px;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.fullscreen__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.fullscreen__text {
+  font-size: 30px;
+  line-height: 35px;
+  max-width: 50%;
+
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.fullscreen__text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
+}
+
 .list__item li {
   transform: translate(-120%, 0px);
   transition: all 0.3s ease 0s;
@@ -10296,3 +10346,24 @@ section#home-reviews p {
 .list__item li:last-child {
   margin: 0;
 }
+/* Fixed header anchor problem fix */
+.anchor {
+  padding-top: 150px;
+  margin-top: -150px;
+}
+
+/* Media queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
