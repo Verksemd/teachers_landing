@@ -89,8 +89,15 @@ $('.nav-link').click(function(){
     scrollTop: $(divId).offset().top - 54
   }, 100);
 });*/
+$('.navbar-nav li a').on('click', function(){
+  if(!$( this ).hasClass('dropdown-toggle')){
+    $('.navbar-collapse').collapse('hide');
+  }
+});
+
 
 /* Animating */
+
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
