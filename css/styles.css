@@ -5450,12 +5450,13 @@ a.close.disabled {
   align-items: center;
   min-height: calc(100% - 1rem);
 }
+
 .modal-dialog-centered::before {
   display: block;
   height: calc(100vh - 1rem);
+  height: min-content;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content;
   content: "";
 }
 .modal-dialog-centered.modal-dialog-scrollable {
@@ -10048,7 +10049,7 @@ hr.light {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: black !important;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: 0.9rem;
@@ -10066,7 +10067,7 @@ hr.light {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: black;
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
@@ -10352,21 +10353,68 @@ section#home-reviews p {
   margin-top: -150px;
 }
 
+div.clients {
+  margin: 0 auto;
+  height: 40vh;
+  width: 60vw;
+  background: url("../assets/img/clients/clients_full.png") no-repeat center;
+  background-size: cover;
+
+}
+
+.review-item{
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 5px #343a40;
+}
+
+.review-item .review-date{
+  color: #cecece;
+}
+.review-item .review-text{
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 5px;
+  color: #343a40;
+}
+
+.review-item .reviewer{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #cecece;
+}
+
 /* Media queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .carousel-item {
-    padding-right: 0;
-    padding-left: 0;
+  header.masthead {
+    padding-top: 18rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/anastasia3-min.png");
+    background-position: 0 90px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain;
+  }
+  span.text-white {
+    padding-left: 0 !important;
   }
 }
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .carousel-item {
-    padding-right: 0;
-    padding-left: 0;
+  header.masthead {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/anastasia3-min.png");
+    background-position: 0 90px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain;
   }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
