@@ -10244,6 +10244,7 @@ section#home-reviews p {
 
 .review-body {
   color: white;
+  font-size: 1rem;
 }
 
 /*animation*/
@@ -10355,11 +10356,10 @@ section#home-reviews p {
 
 div.clients {
   margin: 0 auto;
-  height: 40vh;
+  height: 60vh;
   width: 60vw;
+  background-size: contain;
   background: url("../assets/img/clients/clients_full.png") no-repeat center;
-  background-size: cover;
-
 }
 
 .review-item{
@@ -10385,9 +10385,11 @@ div.clients {
   border: 1px solid #cecece;
 }
 
+
 /* Media queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /* Background image */
   header.masthead {
     padding-top: 18rem;
     padding-bottom: 5rem;
@@ -10397,9 +10399,30 @@ div.clients {
     background-attachment: scroll;
     background-size: contain;
   }
+  /*Преподаватель английского языка*/
   span.text-white {
     padding-left: 0 !important;
   }
+  /*Reviews text*/
+  .review-body {
+     color: white;
+     font-size: 0.8rem;
+      margin-bottom: 0;
+   }
+  /*Reviews photos*/
+  .rounded-circle {
+    height: 4rem;
+    width: 4rem;
+  }
+  /*Clients*/
+  div.clients {
+    margin: 0 auto;
+    height: 50vw;
+    width: auto;
+    background: url("../assets/img/clients/clients_full.png") no-repeat center;
+    background-size: contain;
+  }
+
 }
 
 
@@ -10414,14 +10437,73 @@ div.clients {
     background-attachment: scroll;
     background-size: contain;
   }
+  .review-body {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  .rounded-circle {
+    height: 4rem;
+    width: 4rem;
+  }
+  div.clients {
+    margin: 0 auto;
+    height: 50vw;
+    width: auto;
+    background: url("../assets/img/clients/clients_full.png") no-repeat center;
+    background-size: contain;
+  }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+  p.review-body {
+    color: white;
+    font-size: 1rem;
+  }
+  img.rounded-circle {
+    height: 6rem;
+    width: 6rem;
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+
+  p.review-body {
+    color: white;
+    font-size: 1rem;
+  }
+  img.rounded-circle {
+    height: 6rem;
+    width: 6rem;
+  }
+  div.clients {
+    margin: 0 auto;
+    height: 60vh;
+    width: 60vw;
+    background-size: contain;
+    background: url("../assets/img/clients/clients_full.png") no-repeat center;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+  p.review-body {
+    color: white;
+    font-size: 1rem;
+  }
+  img.rounded-circle {
+    height: 6rem;
+    width: 6rem;
+  }
+  div.clients {
+    margin: 0 auto;
+    height: 60vh;
+    width: 60vw;
+    background-size: contain;
+    background: url("../assets/img/clients/clients_full.png") no-repeat center;
+  }
+}

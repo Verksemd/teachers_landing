@@ -22,8 +22,9 @@
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
+    $('.dropdown-menu').collapse('hide');
   });
+
 
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
@@ -63,16 +64,20 @@
 })(jQuery); // End of use strict
 
 function normalizeSlideHeights() {
-  $('.carousel').each(function(){
-    var items = $('.carousel-item', this);
-    // reset the height
-    items.css('min-height', 0);
-    // set the height
-    var maxHeight = Math.max.apply(null,
-        items.map(function(){
-          return $(this).outerHeight()}).get() );
-    items.css('min-height', maxHeight + 'px');
-  })
+  const width = $("body").width();
+  if (width > 1024) {
+    $('.carousel').each(function () {
+      var items = $('.carousel-item', this);
+      // reset the height
+      items.css('min-height', 0);
+      // set the height
+      var maxHeight = Math.max.apply(null,
+          items.map(function () {
+            return $(this).outerHeight()
+          }).get());
+      items.css('min-height', maxHeight + 'px');
+    })
+  }
 }
 
 $(window).on(
