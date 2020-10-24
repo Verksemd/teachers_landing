@@ -10177,6 +10177,7 @@ header.masthead h1 {
 
 span.text-white {
   font-size: 0.8rem;
+  padding-left: 0;
 }
 
 .btn-circle {
@@ -10384,6 +10385,11 @@ div.clients {
   height: 100px;
   border: 1px solid #cecece;
 }
+a.social_link:hover {
+  outline: 0;
+  color: #fff;
+  background: rgba(255,255,255,.1);
+}
 
 
 /* Media queries */
@@ -10453,12 +10459,24 @@ div.clients {
     background: url("../assets/img/clients/clients_full.png") no-repeat center;
     background-size: contain;
   }
+  span.text-white {
+    padding-left: 0 !important;
+  }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+  /* Background image */
+  header.masthead {
+    padding-top: 18rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/anastasia3-min.png");
+    background-position: 0 90px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: contain;
+  }
   p.review-body {
     color: white;
     font-size: 1rem;
@@ -10467,11 +10485,26 @@ div.clients {
     height: 6rem;
     width: 6rem;
   }
+  div.clients {
+    margin: 0 auto;
+    height: 60vh;
+    width: 60vw;
+    background-size: contain;
+    background: url("../assets/img/clients/clients_full.png") no-repeat center;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  header.masthead {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/anastasia3-min.png");
+    background-position: 0 90px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
   p.review-body {
     color: white;
     font-size: 1rem;
@@ -10491,6 +10524,14 @@ div.clients {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  header.masthead {
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/anastasia3-min.png");
+    background-position: 0 90px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
   p.review-body {
     color: white;
     font-size: 1rem;
